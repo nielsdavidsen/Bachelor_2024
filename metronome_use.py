@@ -5,9 +5,9 @@ low = 80
 mid = 130
 high = 180
 
-max_beats = 48
-threshold_l = 16
-threshold_h = 32
+max_beats = 56
+threshold_l = 24
+threshold_h = 40
 
 # 3x3 bpm matrix
 bpm = [[(low, low), (low, mid), (low, high)],
@@ -18,5 +18,4 @@ for i in range(3):
     bpm[i][i] = (0, 0)
 
 
-
-mt.metronome(*bpm[0][1], max_beats, threshold_l, threshold_h)
+mt.metronome(*bpm[2][1], max_beats, threshold_l, threshold_h)

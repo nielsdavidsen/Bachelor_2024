@@ -26,10 +26,14 @@ def metronome(bpm_i, bpm_f, max_beats = 48, threshold_l = 16, threshold_h = 32):
     # Initialize pygame and load sound
     pygame.init()
     pygame.mixer.init()
-    pygame.mixer.music.load("beep.wav")  # Load a short beep sound file
+    pygame.mixer.music.load("bob.wav")  # Load a short beep sound file
     
     print(f"Metronome started at {bpm_i} BPM and ends at {bpm_f}. Press cmd + C to stop.")
 
+    pygame.mixer.music.play()  # Play the beep sound
+    time.sleep(3)
+
+    pygame.mixer.music.load("beep.wav")  # Load a short beep sound file
     while n_beats < max_beats:
         try:
 
