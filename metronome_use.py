@@ -18,4 +18,4 @@ for i in range(3):
     bpm[i][i] = (0, 0)
 
 
-mt.metronome(*bpm[1][0], max_beats, threshold_l, threshold_h)
+mt.metronome(*bpm[2][1], max_beats, threshold_l, threshold_h)
